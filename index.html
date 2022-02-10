@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport'
+          content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0'>
+    <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+    <link href='https://unpkg.com/nes.css@2.3.0/css/nes.min.css' rel='stylesheet' />
+    <link href='https://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet'>
+    <link href='https://unpkg.com/nes.css/css/nes.css' rel='stylesheet' />
+
+    <link rel='stylesheet' href='./style/style.css'>
+    <title>Document</title>
+
+    <style>
+        html, body, pre, code, kbd, samp {
+            font-family: "Press Start 2P";
+        }
+
+        body {
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+<div class='game'>
+    <div class='arena'>
+        <div class='team__wrapper'>
+            <div class='nes-container with-title is-centered'>
+                <p class='title'>Heroes team</p>
+                <div id='hero-team'>
+
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class='team__wrapper'>
+            <div class='nes-container with-title is-centered'>
+                <p class='title'>Villains team</p>
+                <div id='villain-team'>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class='ui__wrapper nes-container'>
+        <button type='button' class='nes-btn is-error' id='start-battle'>Start battle</button>
+
+        <div class='ui__inputs'>
+            <div class='nes-field'>
+                <label for='name'>Name</label>
+                <div class='name'>
+                    <input type='text' id='name' class='nes-input'>
+                    <button type='button' class='random' id='random-name'>R</button>
+                </div>
+                <span class='nes-text is-error' id='name-error' maxlength='15'>Name your character</span>
+                <span class='nes-text is-error' id='taken-name-error'>Character name is already taken</span>
+                <span class='nes-text is-error' id='too-short-name-error'>Name is too short</span>
+            </div>
+
+            <div class='nes-field'>
+                <label for='weapon'>Weapon</label>
+                <div class='weapon'>
+                    <input type='text' id='weapon' class='nes-input' maxlength='15'>
+                    <span class='nes-text is-error' id='weapon-error'>Insert weapon name</span>
+                    <span class='nes-text is-error' id='too-short-weapon-name-error'>Weapon name is too short</span>
+                    <button type='button' class='random' id='random-weapon'>R</button>
+                </div>
+            </div>
+
+            <div class='nes-field'>
+                <label for='strength'>Strength</label>
+                <div class='strength'>
+                    <input type='text' id='strength' class='nes-input'>
+                    <button type='button' class='random' id='random-strength'>R</button>
+                </div>
+            </div>
+
+            <div class='nes-field'>
+                <label for='hitpoints'>HitPoints</label>
+                <div class='hitpoints'>
+                    <input type='text' id='hitpoints' class='nes-input'>
+                    <button type='button' class='random' id='random-hitpoints'>R</button>
+                </div>
+            </div>
+        </div>
+
+        <label for='default_select'>Select Team</label>
+        <div class='nes-select'>
+            <select required id='default_select'>
+                <option value='' disabled selected hidden>Select...</option>
+                <option value='teamHero' id='teamHero'>Heroes team</option>
+                <option value='teamVillain' id='teamVillain'>Villains team</option>
+            </select>
+        </div>
+        <span class='nes-text is-error' id='select-team-error'>You have to select the team</span>
+        <div>
+            <button type='button' class='nes-btn is-warning' id='random-character'>Random data</button>
+            <button type='button' class='nes-btn is-primary' id='add-character'>Add Character</button>
+        </div>
+
+        <div id="ranking">
+            <h1>Ranking</h1>
+            <div><h2>HeroTeam: </h2><span id="heroWins"></span></div>
+            <div><h2>VillainTeam: </h2><span id="villainWins"></span></div>
+        </div>
+
+    </div>
+</div>
+<script type='module' src='./scripts/main.js'></script>
+</body>
+</html>

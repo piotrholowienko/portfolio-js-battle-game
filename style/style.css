@@ -1,0 +1,105 @@
+* {
+    box-sizing: border-box;
+}
+
+.arena {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 25px;
+}
+
+.team__wrapper {
+    width: 45%;
+
+}
+.avatar__wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+
+}
+
+.avatar {
+    width: 60px;
+    height: auto;
+    margin-right: 25px;
+}
+
+.character {
+    display: flex;
+    text-align: left;
+    flex-wrap: wrap;
+    margin: 10px 0;
+}
+
+.nes-progress {
+    height: 20px;
+    width: 100%;
+}
+
+#select-team-error, #name-error, #taken-name-error, #weapon-error, #too-short-name-error, #too-short-weapon-name-error {
+    display: none;
+}
+
+.name {
+    width: 100%;
+}
+
+.hitpoints, .strength, .weapon, .name {
+    position: relative;
+}
+
+.random {
+        position: absolute;
+        top: 8px;
+        border-radius: 5px;
+        right: 10px;
+        z-index: 2;
+        border: none;
+        text-align: center;
+        height: 25px;
+        color: white;
+        background-color: #1e90ff;
+}
+
+.delete-char {
+        position: absolute;
+        top: 6px;
+        border-radius: 5px;
+        right: 6px;
+        z-index: 2;
+        border: none;
+        height: 25px;
+        color: white;
+        text-align: center;
+        background-color: #ff0000;
+}
+
+.ui__wrapper {
+    margin: 25px;
+}
+
+.ui__inputs {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.ui__inputs .nes-field {
+    width: 20%;
+}
+
+.nes-select {
+    margin-bottom: 25px;
+}
+
+.nes-text.is-warning {
+    color: #007bbd;
+}
+
+#start-battle {
+    margin-bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+}
